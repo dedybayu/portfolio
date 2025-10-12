@@ -13,6 +13,14 @@
         .gradient-bg {
             background: linear-gradient(90deg, #7c3aed 0%, #06b6d4 100%);
         }
+
+        img[src*="shields.io"] {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            border-radius: 0 !important;
+            padding: 0 !important;
+        }
     </style>
 </head>
 
@@ -191,8 +199,6 @@
                             style="background:transparent!important;border:none!important;box-shadow:none!important;"
                             class="h-5">
                     </div>
-
-
 
                     <p class="mt-2 text-sm text-gray-600 flex-grow">
                         Laravel-based system for recording student achievements and
