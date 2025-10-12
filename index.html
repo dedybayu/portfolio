@@ -21,6 +21,20 @@
             border-radius: 0 !important;
             padding: 0 !important;
         }
+
+        /* Tambahkan di style tag kamu */
+        #projects img[src*="shields.io"] {
+            max-height: 20px;
+            max-width: 100px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        #projects .flex-wrap {
+            overflow: hidden;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
     </style>
 </head>
 
@@ -178,7 +192,7 @@
                     <h4 class="font-semibold">PresApp — Student Achievement System</h4>
 
                     <!-- Badges -->
-                    <div class="mt-2 flex flex-wrap gap-2 min-w-0">
+                    <div class="mt-2 flex flex-wrap gap-2 max-w-full overflow-hidden"">
                         <img src="https://img.shields.io/badge/Laravel-11.x-eef0f3?logo=laravel&logoColor=FF2D20&labelColor=ffffff&style=flat"
                             alt="Laravel Badge" class="h-5 max-w-[120px] object-contain">
                         <img src="https://img.shields.io/badge/TailwindCSS-3.4-eef0f3?logo=tailwindcss&logoColor=06B6D4&labelColor=ffffff&style=flat"
