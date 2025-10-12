@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Certificates — Dedy Bayu Setiawan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            margin: 5% auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 leading-relaxed">
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 text-indigo-600 font-semibold hover:text-indigo-800">
+                <!-- Ikon panah kiri (SVG Heroicon) -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+                Back
+            </a>
+
+            <h1 class="font-bold text-lg">My Certificates</h1>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        <section>
+            <h2 class="text-2xl font-semibold mb-6">Certificates & Licenses</h2>
+
+            <!-- Certificate Card 4 -->
+            <div class="bg-white rounded-lg shadow p-5">
+                <img src="img/HKI_PresApp_page-0001.jpg" alt="Copyright Registration PresApp"
+                    class="rounded mb-4 w-full h-48 object-contain cursor-pointer" onclick="openModal(this.src)">
+                <h3 class="font-semibold text-indigo-600">Copyright Registration — PresApp</h3>
+                <p class="text-sm text-gray-600 mt-2">Issued by: Ministry of Law and Human Rights, Republic of
+                    Indonesia</p>
+                <p class="text-sm text-gray-600">Registration No: 000930684 (2025)</p>
+                <div class="flex justify-end">
+                    <a href="pdf/HKI_PresApp.pdf" target="_blank"
+                        class="inline-block mt-3 px-3 py-1 rounded bg-indigo-600 text-white text-sm">View PDF</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow p-5">
+                <img src="img/BNSP_JWD-1.jpg" alt="LSP IT Network System Administrator"
+                    class="rounded mb-4 w-full h-48 object-contain cursor-pointer" onclick="openModal(this.src)">
+                <h3 class="font-semibold text-indigo-600">Junior Web Developer</h3>
+                <p class="text-sm text-gray-600 mt-2">Issued by: BNSP</p>
+                <p class="text-sm text-gray-600">Credentials: </p>
+                <div class="flex justify-end">
+                    <a href="pdf/BNSP_JWD-Dedy_Bayu_Setiawan.pdf" target="_blank"
+                        class="inline-block mt-3 px-3 py-1 rounded bg-indigo-600 text-white text-sm">View PDF</a>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Certificate Card 1 -->
+                <div class="bg-white rounded-lg shadow p-5">
+                    <img src="img/LSP-ITNSA-1.jpg" alt="LSP IT Network System Administrator"
+                        class="rounded mb-4 w-full h-48 object-contain cursor-pointer" onclick="openModal(this.src)">
+                    <h3 class="font-semibold text-indigo-600">LSP IT Network System Administrator</h3>
+                    <p class="text-sm text-gray-600 mt-2">Issued by: BNSP</p>
+                    <p class="text-sm text-gray-600">Credentials: </p>
+                    <div class="flex justify-end">
+                        <a href="pdf/LSP-ITNSA.pdf" target="_blank"
+                            class="inline-block mt-3 px-3 py-1 rounded bg-indigo-600 text-white text-sm">View PDF</a>
+                    </div>
+                </div>
+
+                <!-- Certificate Card 2 -->
+                <div class="bg-white rounded-lg shadow p-5">
+                    <img src="img/Sertifikat_DEDY_BAYU_SETIAWAN_JWD_page-0001.jpg" alt="Junior Web Developer"
+                        class="rounded mb-4 w-full h-48 object-contain cursor-pointer" onclick="openModal(this.src)">
+                    <h3 class="font-semibold text-indigo-600">Junior Web Developer</h3>
+                    <p class="text-sm text-gray-600 mt-2">Issued by: Digitalent</p>
+                    <p class="text-sm text-gray-600">Credentials: </p>
+                    <div class="flex justify-end">
+                        <a href="pdf/Sertifikat_DEDY_BAYU_SETIAWAN_JWD.pdf" target="_blank"
+                            class="inline-block mt-3 px-3 py-1 rounded bg-indigo-600 text-white text-sm">View PDF</a>
+                    </div>
+
+
+                </div>
+
+                <!-- Certificate Card 3 -->
+                <div class="bg-white rounded-lg shadow p-5">
+                    <img src="img/MTCNA_2303NA6503.jpg" alt="MikroTik Certified Network Associate"
+                        class="rounded mb-4 w-full h-48 object-contain cursor-pointer" onclick="openModal(this.src)">
+                    <h3 class="font-semibold text-indigo-600">MikroTik Certified Network Associate (MTCNA)</h3>
+                    <p class="text-sm text-gray-600 mt-2">Issued by: MikroTik</p>
+                    <p class="text-sm text-gray-600">Credentials: 2303NA6503</p>
+                    <div class="flex justify-end">
+                        <a href="pdf/MTCNA_2303NA6503_Dedy_Bayu_Setiawan.pdf" target="_blank"
+                            class="inline-block mt-3 px-3 py-1 rounded bg-indigo-600 text-white text-sm">View PDF</a>
+                    </div>
+                </div>
+
+
+                <div class="bg-white rounded-lg shadow p-5">
+                    <img src="img/MTCNA_2301NA0769.jpg" alt="MikroTik Certified Network Associate"
+                        class="rounded mb-4 w-full h-48 object-contain cursor-pointer" onclick="openModal(this.src)">
+                    <h3 class="font-semibold text-indigo-600">MikroTik Certified Network Associate (MTCNA)</h3>
+                    <p class="text-sm text-gray-600 mt-2">Issued by: MikroTik</p>
+                    <p class="text-sm text-gray-600">Credentials: 2301NA0769</p>
+                    <div class="flex justify-end">
+                        <a href="pdf/MTCNA_2301NA0769_Dedy_Bayu_Setiawan.pdf" target="_blank"
+                            class="inline-block mt-3 px-3 py-1 rounded bg-indigo-600 text-white text-sm">View PDF</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-12">
+            <h2 class="text-2xl font-semibold mb-6">Achievements</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Certificate Card 1 -->
+                <div class="bg-white rounded-lg shadow p-5">
+                    <img src="images/cert_lsp_itnetwork.jpg" alt="LSP IT Network System Administrator"
+                        class="rounded mb-4 w-full h-48 object-cover cursor-pointer" onclick="openModal(this.src)">
+                    <h3 class="font-semibold text-indigo-600">LSP IT Network System Administrator</h3>
+                    <p class="text-sm text-gray-600 mt-2">Issued by: BNSP</p>
+                </div>
+
+                <!-- Certificate Card 2 -->
+                <div class="bg-white rounded-lg shadow p-5">
+                    <img src="img/Sertifikat_DEDY_BAYU_SETIAWAN_JWD_page-0001.jpg" alt="Junior Web Developer"
+                        class="rounded mb-4 w-full h-48 object-contain cursor-pointer" onclick="openModal(this.src)">
+                    <h3 class="font-semibold text-indigo-600">Junior Web Developer</h3>
+                    <p class="text-sm text-gray-600 mt-2">Issued by: BNSP</p>
+                    <p class="text-sm text-gray-600">Credentials: </p>
+                    <a href="pdf/Sertifikat_DEDY_BAYU_SETIAWAN_JWD.pdf" target="_blank"
+                        class="inline-block mt-3 px-3 py-1 rounded bg-indigo-600 text-white text-sm">View PDF</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal for image -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <img id="modalImg" class="modal-content" />
+        </div>
+
+        <footer class="mt-12 text-center text-sm text-gray-500">© 2025 Dedy Bayu Setiawan — Built with Tailwind CSS
+        </footer>
+    </main>
+
+    <script>
+        function openModal(src) {
+            document.getElementById('modalImg').src = src;
+            document.getElementById('imageModal').style.display = 'block';
+        }
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
