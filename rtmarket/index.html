@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RT Market Connect Project Details — Dedy Bayu Setiawan</title>
+    <meta name="description" content="Details of the RT Market Connect project by Dedy Bayu Setiawan." />
+    <script>
+        // Prevent FOUC
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="../dist/output.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/logo_circle.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(90deg, #7c3aed 0%, #06b6d4 100%);
+        }
+
+        /* For image gallery */
+        .gallery-img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-base-200 text-base-content leading-relaxed transition-colors duration-300">
+    <!-- Navbar -->
+    <header class="bg-base-100/70 backdrop-blur-md sticky top-0 z-40 shadow-sm border-b border-base-300/50">
+        <div class="max-w-8xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center gap-2 text-indigo-600 hover:text-indigo-800 transition-colors font-medium">
+                <i class='bx bx-arrow-back text-xl'></i>
+                <span>Back to Portfolio</span>
+            </a>
+            <div class="flex items-center gap-4">
+                <label class="swap swap-rotate ml-2 text-base-content hover:text-indigo-600 transition-colors">
+                    <input type="checkbox" id="themeToggle" />
+                    <!-- sun icon -->
+                    <svg class="swap-on w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5" />
+                        <path
+                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42 1.42" />
+                    </svg>
+                    <!-- moon icon -->
+                    <svg class="swap-off w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        <!-- Project Header -->
+        <div class="mb-12 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-4">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-4">RT Market Connect</h1>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-2 mb-4">
+                        <img src="https://img.shields.io/badge/Flutter-02569B?logo=flutter&logoColor=white&style=flat"
+                            alt="Flutter" class="h-6 rounded">
+                        <img src="https://img.shields.io/badge/Golang-00ADD8?logo=go&logoColor=white&style=flat"
+                            alt="Go" class="h-6 rounded">
+                        <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=flat"
+                            alt="Python" class="h-6 rounded">
+                        <img src="https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white&style=flat"
+                            alt="PostgreSQL" class="h-6 rounded">
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-3 justify-center md:justify-end">
+                    <a href="https://github.com/dedybayu/rt_market_connect.git" target="_blank"
+                        class="px-4 py-2 rounded-lg border border-blue-200 text-blue-600 hover:bg-blue-50 transition-colors font-medium flex items-center gap-2">
+                        <i class='bx bx-mobile-alt text-xl'></i>
+                        Frontend
+                    </a>
+                    <a href="https://github.com/dedybayu/backend_pbl.git" target="_blank"
+                        class="px-4 py-2 rounded-lg border border-cyan-200 text-cyan-600 hover:bg-cyan-50 transition-colors font-medium flex items-center gap-2">
+                        <i class='bx bx-server text-xl'></i>
+                        Backend
+                    </a>
+                    <a href="https://github.com/dedybayu/Deteksi_Buah_PBL.git" target="_blank"
+                        class="px-4 py-2 rounded-lg border border-yellow-500 text-yellow-700 hover:bg-yellow-50 transition-colors font-medium flex items-center gap-2">
+                        <i class='bx bx-brain text-xl'></i>
+                        ML Model
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 p-6 bg-base-100 rounded-2xl border border-base-300 shadow-sm">
+                <h3 class="text-xl font-semibold mb-3">Project Overview</h3>
+                <p class="text-base-content/80 text-lg leading-relaxed">
+                    RT Market Connect is a community management system and local marketplace built with a decoupled architecture. 
+                    It utilizes <strong>Golang</strong> as a high-performance API gateway, <strong>Flutter</strong> for a responsive mobile interface, 
+                    and a <strong>Computer Vision (Python)</strong> module for automated fruit classification within the marketplace engine.
+                </p>
+            </div>
+        </div>
+
+        <!-- Image Gallery -->
+        <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+            <i class='bx bx-images text-indigo-600'></i> Gallery
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Dashboard -->
+            <div class="bg-base-100 rounded-3xl p-4 md:p-6 shadow-sm border border-base-300 flex flex-col h-full">
+                <div class="mb-4">
+                    <h3 class="text-2xl font-semibold">Dashboard</h3>
+                    <p class="text-base-content/60 mt-1">Main community dashboard for quick access to essential features.</p>
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-base-200 bg-base-200 flex-grow flex items-center justify-center p-4">
+                    <img src="../img/rtmarket/dashboard.jpg" alt="Dashboard" class="max-h-[600px] w-auto object-contain gallery-img rounded-xl shadow-md" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Marketplace -->
+            <div class="bg-base-100 rounded-3xl p-4 md:p-6 shadow-sm border border-base-300 flex flex-col h-full">
+                <div class="mb-4">
+                    <h3 class="text-2xl font-semibold">Marketplace</h3>
+                    <p class="text-base-content/60 mt-1">Local marketplace integrating the Computer Vision model for fruit classification.</p>
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-base-200 bg-base-200 flex-grow flex items-center justify-center p-4">
+                    <img src="../img/rtmarket/marketplace.jpg" alt="Marketplace" class="max-h-[600px] w-auto object-contain gallery-img rounded-xl shadow-md" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Kependudukan -->
+            <div class="bg-base-100 rounded-3xl p-4 md:p-6 shadow-sm border border-base-300 flex flex-col h-full">
+                <div class="mb-4">
+                    <h3 class="text-2xl font-semibold">Kependudukan</h3>
+                    <p class="text-base-content/60 mt-1">Population and demographic management system for the community.</p>
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-base-200 bg-base-200 flex-grow flex items-center justify-center p-4">
+                    <img src="../img/rtmarket/kependudukan.jpg" alt="Kependudukan" class="max-h-[600px] w-auto object-contain gallery-img rounded-xl shadow-md" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Keuangan -->
+            <div class="bg-base-100 rounded-3xl p-4 md:p-6 shadow-sm border border-base-300 flex flex-col h-full">
+                <div class="mb-4">
+                    <h3 class="text-2xl font-semibold">Keuangan</h3>
+                    <p class="text-base-content/60 mt-1">Financial management and tracking for neighborhood dues and expenses.</p>
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-base-200 bg-base-200 flex-grow flex items-center justify-center p-4">
+                    <img src="../img/rtmarket/keuangan.jpg" alt="Keuangan" class="max-h-[600px] w-auto object-contain gallery-img rounded-xl shadow-md" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Deteksi -->
+            <div class="bg-base-100 rounded-3xl p-4 md:p-6 shadow-sm border border-base-300 flex flex-col h-full">
+                <div class="mb-4">
+                    <h3 class="text-2xl font-semibold">Deteksi Buah</h3>
+                    <p class="text-base-content/60 mt-1">Computer vision module for automated fruit classification.</p>
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-base-200 bg-base-200 flex-grow flex items-center justify-center p-4">
+                    <img src="../img/rtmarket/deteksi.jpg" alt="Deteksi Buah" class="max-h-[600px] w-auto object-contain gallery-img rounded-xl shadow-md" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Profile -->
+            <div class="bg-base-100 rounded-3xl p-4 md:p-6 shadow-sm border border-base-300 flex flex-col h-full">
+                <div class="mb-4">
+                    <h3 class="text-2xl font-semibold">User Profile</h3>
+                    <p class="text-base-content/60 mt-1">User account management and settings interface.</p>
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-base-200 bg-base-200 flex-grow flex items-center justify-center p-4">
+                    <img src="../img/rtmarket/profile.jpg" alt="Profile" class="max-h-[600px] w-auto object-contain gallery-img rounded-xl shadow-md" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-12 py-8 border-t border-base-300 text-center text-sm text-gray-500">
+        <div class="max-w-6xl mx-auto px-6">
+            <p>© 2025 Dedy Bayu Setiawan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle logic
+        const themeToggle = document.getElementById('themeToggle');
+        if (document.documentElement.getAttribute('data-theme') === 'dark') {
+            themeToggle.checked = true;
+        }
+        themeToggle.addEventListener('change', (e) => {
+            const theme = e.target.checked ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        });
+    </script>
+</body>
+
+</html>
