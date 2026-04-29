@@ -817,29 +817,34 @@
         const menuToggle = document.getElementById('mobileMenuToggle');
         const menu = document.getElementById('mobileMenu');
         
+        const closeMenu = () => {
+            menuToggle.checked = false;
+            menu.classList.add('max-h-0');
+            menu.classList.remove('max-h-96');
+        };
+
         menuToggle.addEventListener('change', (e) => {
             if (e.target.checked) {
                 menu.classList.remove('max-h-0');
                 menu.classList.add('max-h-96');
             } else {
-                menu.classList.add('max-h-0');
-                menu.classList.remove('max-h-96');
+                closeMenu();
             }
         });
 
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
+        // Close menu when clicking outside (handle both mouse and touch for iOS)
+        const handleOutsideClick = (e) => {
             if (menuToggle.checked && !menu.contains(e.target) && !menuToggle.parentElement.contains(e.target)) {
-                menuToggle.checked = false;
-                menuToggle.dispatchEvent(new Event('change'));
+                closeMenu();
             }
-        });
+        };
+        document.addEventListener('click', handleOutsideClick);
+        document.addEventListener('touchstart', handleOutsideClick, { passive: true });
 
         // Close menu when a link is clicked
         menu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                menuToggle.checked = false;
-                menuToggle.dispatchEvent(new Event('change'));
+                closeMenu();
             });
         });
     </script>
