@@ -46,7 +46,7 @@
     <!-- Navbar -->
     <header class="bg-base-100/70 backdrop-blur-md sticky top-0 z-40 shadow-sm border-b border-base-300/50">
         <div class="max-w-8xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="../index.html" class="flex items-center gap-2 text-indigo-600 hover:text-indigo-800 transition-colors font-medium">
+            <a href="../index.html" class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors font-medium">
                 <i class='bx bx-arrow-back text-xl'></i>
                 <span>Back to Portfolio</span>
             </a>
@@ -89,17 +89,17 @@
                 </div>
                 <div class="flex flex-wrap gap-3 justify-center md:justify-end">
                     <a href="https://github.com/dedybayu/rt_market_connect.git" target="_blank"
-                        class="px-4 py-2 rounded-lg border border-blue-200 text-blue-600 hover:bg-blue-50 transition-colors font-medium flex items-center gap-2">
+                        class="px-4 py-2 rounded-lg border border-blue-200 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors font-medium flex items-center gap-2">
                         <i class='bx bx-mobile-alt text-xl'></i>
                         Frontend
                     </a>
                     <a href="https://github.com/dedybayu/backend_pbl.git" target="_blank"
-                        class="px-4 py-2 rounded-lg border border-cyan-200 text-cyan-600 hover:bg-cyan-50 transition-colors font-medium flex items-center gap-2">
+                        class="px-4 py-2 rounded-lg border border-cyan-200 dark:border-cyan-400 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-50 dark:hover:bg-cyan-900/30 transition-colors font-medium flex items-center gap-2">
                         <i class='bx bx-server text-xl'></i>
                         Backend
                     </a>
                     <a href="https://github.com/dedybayu/Deteksi_Buah_PBL.git" target="_blank"
-                        class="px-4 py-2 rounded-lg border border-yellow-500 text-yellow-700 hover:bg-yellow-50 transition-colors font-medium flex items-center gap-2">
+                        class="px-4 py-2 rounded-lg border border-yellow-500 dark:border-yellow-400 text-yellow-700 dark:text-yellow-400 hover:bg-yellow-50 dark:hover:bg-yellow-900/30 transition-colors font-medium flex items-center gap-2">
                         <i class='bx bx-brain text-xl'></i>
                         ML Model
                     </a>
@@ -202,6 +202,16 @@
         if (document.documentElement.getAttribute('data-theme') === 'dark') {
             themeToggle.checked = true;
         }
+
+        // Listen for system theme changes if no local override exists
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (!localStorage.getItem('theme')) {
+                const newTheme = e.matches ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                themeToggle.checked = e.matches;
+            }
+        });
+
         themeToggle.addEventListener('change', (e) => {
             const theme = e.target.checked ? 'dark' : 'light';
             document.documentElement.setAttribute('data-theme', theme);

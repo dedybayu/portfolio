@@ -46,7 +46,7 @@
     <!-- Navbar -->
     <header class="bg-base-100/70 backdrop-blur-md sticky top-0 z-40 shadow-sm border-b border-base-300/50">
         <div class="max-w-8xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="../index.html" class="flex items-center gap-2 text-indigo-600 hover:text-indigo-800 transition-colors font-medium">
+            <a href="../index.html" class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors font-medium">
                 <i class='bx bx-arrow-back text-xl'></i>
                 <span>Back to Portfolio</span>
             </a>
@@ -89,7 +89,7 @@
                 </div>
                 <div class="flex flex-wrap gap-3 justify-center md:justify-end">
                     <a href="https://github.com/dedybayu/saklar_esp.git" target="_blank"
-                        class="px-5 py-2.5 rounded-lg border border-indigo-200 text-indigo-600 hover:bg-indigo-50 hover:border-indigo-400 transition-colors font-medium flex items-center gap-2">
+                        class="px-5 py-2.5 rounded-lg border border-indigo-200 dark:border-indigo-400 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-500/20 hover:border-indigo-400 transition-colors font-medium flex items-center gap-2">
                         <i class='bx bxl-github text-xl'></i>
                         Source Code
                     </a>
@@ -148,6 +148,16 @@
         if (document.documentElement.getAttribute('data-theme') === 'dark') {
             themeToggle.checked = true;
         }
+
+        // Listen for system theme changes if no local override exists
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (!localStorage.getItem('theme')) {
+                const newTheme = e.matches ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                themeToggle.checked = e.matches;
+            }
+        });
+
         themeToggle.addEventListener('change', (e) => {
             const theme = e.target.checked ? 'dark' : 'light';
             document.documentElement.setAttribute('data-theme', theme);
